@@ -37,7 +37,7 @@ export default function Home(props: HomeProps) {
   }
 
     return (
-        <div className="max-w[1124px] h-screen mx-10 grid grid-cols-2 gap-28 items-center">
+        <div className="max-w[1124px] h-screen mx-auto grid grid-cols-2 gap-28 items-center">
             <main>
                 <Image src={logoImg} alt="NLW Copa" />
                 <h1 className="mt-14 text-white text-5xl font-bold leading-tight">
