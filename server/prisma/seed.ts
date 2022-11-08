@@ -7,7 +7,7 @@ async function main() {
     data: {
       name: 'John Doe',
       email: 'john.doe@gmail.com',
-      avatarUrl: 'https://github.com/Bamarcheti',
+      avatarUrl: 'https://github.com/diego3g.png',
     }
   })
 
@@ -27,22 +27,62 @@ async function main() {
 
   await prisma.game.create({
     data: {
-      date: '2022-11-02T12:00:00.768Z',
-      firstTeamCountryCode: 'DE',
-      secondTeamCountryCode: 'BR',
+      date: '2022-11-24T15:00:00.768Z',
+      firstTeamCountryCode: 'BR',
+      secondTeamCountryCode: 'SE',
+
+      guesses: {
+        create: {
+          firstTeamPoints: 3,
+          secondTeamPoints: 2,
+
+          participant: {
+            connect: {
+              userId_poolId: {
+                userId: user.id,
+                poolId: pool.id,
+              }
+            }
+          }
+        }
+      }
     }
   })
 
   await prisma.game.create({
     data: {
-      date: '2022-11-03T12:00:00.768Z',
+      date: '2022-11-28T12:00:00.768Z',
       firstTeamCountryCode: 'BR',
-      secondTeamCountryCode: 'AR',
+      secondTeamCountryCode: 'SW',
 
       guesses: {
         create: {
           firstTeamPoints: 2,
           secondTeamPoints: 1,
+
+          participant: {
+            connect: {
+              userId_poolId: {
+                userId: user.id,
+                poolId: pool.id,
+              }
+            }
+          }
+        }
+      }
+    }
+  })
+
+  await prisma.game.create({
+    data: {
+      date: '2022-12-02T15:00:00.768Z',
+      firstTeamCountryCode: 'CM',
+      secondTeamCountryCode: 'BR',
+
+      guesses: {
+        create: {
+          firstTeamPoints: 3,
+          secondTeamPoints: 5,
 
           participant: {
             connect: {
