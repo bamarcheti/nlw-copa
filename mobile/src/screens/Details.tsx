@@ -10,7 +10,7 @@ import { Guesses } from '../components/Guesses';
 import { Header } from '../components/Header';
 import { Loading } from '../components/Loading';
 import { Option } from '../components/Option';
-import { PoolCardPros } from '../components/PoolCard';
+import { PoolCardProps } from '../components/PoolCard';
 import { PoolHeader } from '../components/PoolHeader';
 
 interface RoutePrams {
@@ -20,7 +20,7 @@ interface RoutePrams {
 export function Details() {
   const [optionSelected, setOptionSelected] = useState<'guesses' | 'ranking'>('guesses')
   const [isLoading, setIsLoading] = useState(true);
-  const [poolDetails, setPoolDetails] = useState<PoolCardPros>({} as PoolCardPros);
+  const [poolDetails, setPoolDetails] = useState<PoolCardProps>({} as PoolCardProps);
 
   const route = useRoute();
   const toast = useToast();
@@ -65,7 +65,7 @@ export function Details() {
   }
 
   return (
-    <VStack flex={1} bgColor="gray.900">
+    <VStack flex={1} bgColor='gray.900'>
       <Header 
         title={poolDetails.title} 
         showBackButton 
@@ -78,7 +78,7 @@ export function Details() {
         <VStack px={5} flex={1}>
           <PoolHeader data={poolDetails} />
 
-          <HStack bgColor="gray.800" p={1} rounded="sm" mb={8}>
+          <HStack bgColor='gray.800' p={1} rounded='sm' mb={8}>
             <Option 
               title='Seus palpites' 
               isSelected={optionSelected === 'guesses'} 

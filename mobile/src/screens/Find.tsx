@@ -1,10 +1,10 @@
-import { useNavigation } from "@react-navigation/native";
-import { Heading, useToast, VStack } from "native-base";
-import { useState } from "react";
-import { Button } from "../components/Button";
-import { Header } from "../components/Header";
-import { Input } from "../components/Input";
-import { api } from "../services/api";
+import { useNavigation } from '@react-navigation/native';
+import { Heading, useToast, VStack } from 'native-base';
+import { useState } from 'react';
+import { Button } from '../components/Button';
+import { Header } from '../components/Header';
+import { Input } from '../components/Input';
+import { api } from '../services/api';
 
 export function Find() {
   const [isLoading, setIsLoading] = useState(false);
@@ -64,16 +64,16 @@ export function Find() {
   }
     
   return (
-		<VStack flex={1} bgColor="gray.900">
-    	<Header title="Buscar por código" showBackButton />
+		<VStack flex={1} bgColor='gray.900'>
+    	<Header title='Buscar por código' showBackButton />
 			
-			<VStack mt={8} mx={5} alignItems="center">
+			<VStack mt={8} mx={5} alignItems='center'>
 				<Heading
-				  fontFamily="heading"
-				  color="white"
-			    fontSize="xl"
+				  fontFamily='heading'
+				  color='white'
+			    fontSize='xl'
 			    mb={8}
-			    textAlign="center"
+			    textAlign='center'
 				>
 			    Encontre um bolão através de {'\n'}
 				  de seu código
@@ -81,14 +81,14 @@ export function Find() {
 
 				<Input
 				  mb={2}
-				  placeholder="Qual o código do bolão?"
-					autoCapitalize="characters"
+				  placeholder='Qual o código do bolão?'
+					autoCapitalize='characters'
 					onChangeText={setCode}
 					value={code}
 				/>
 
 				<Button 
-				  title="BUSCAR BOLÃO"
+				  title='BUSCAR BOLÃO'
 				  isLoading={isLoading}
 				  onPress={handleJoinPool}
 				/>

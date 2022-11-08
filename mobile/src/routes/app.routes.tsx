@@ -34,7 +34,7 @@ export function AppRoutes() {
       }
     }}>
       <Screen 
-        name="new"
+        name='new'
 
         component={New}
         options={{
@@ -43,7 +43,7 @@ export function AppRoutes() {
         }}
       />
       <Screen 
-        name="pools"
+        name='pools'
         component={Pools}
         options={{
           tabBarIcon: ({ color }) => <SoccerBall color={color} size={size} />,
@@ -52,13 +52,13 @@ export function AppRoutes() {
       />
 
       <Screen 
-        name="find"
+        name='find'
         component={Find}
         options={{ tabBarButton: () => null }}
       />
 
       <Screen 
-        name="details"
+        name='details'
         component={Details}
         options={{ tabBarButton: () => null }}
       />

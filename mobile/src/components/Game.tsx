@@ -32,31 +32,31 @@ interface Props {
 export function Game({ data, setFirstTeamPoints, setSecondTeamPoints, onGuessConfirm }: Props) {
   const { colors, sizes } = useTheme();
 
-  const when = dayjs(data.date).locale(ptBR).format("DD [de] MMMM [de] YYYY [às] HH:00[h]");
+  const when = dayjs(data.date).locale(ptBR).format('DD [de] MMMM [de] YYYY [às] HH:00[h]');
 
   return (
     <VStack
-      w="full"
-      bgColor="gray.800"
-      rounded="sm"
-      alignItems="center"
+      w='full'
+      bgColor='gray.800'
+      rounded='sm'
+      alignItems='center'
       borderBottomWidth={3}
-      borderBottomColor="yellow.500"
+      borderBottomColor='yellow.500'
       mb={3}
       p={4}
     >
-      <Text color="gray.100" fontFamily="heading" fontSize="sm">
+      <Text color='gray.100' fontFamily='heading' fontSize='sm'>
         {getName(data.firstTeamCountryCode)} vs. {getName(data.secondTeamCountryCode)}
       </Text>
 
-      <Text color="gray.200" fontSize="xs">
+      <Text color='gray.200' fontSize='xs'>
         {when}
       </Text>
 
-      <HStack mt={4} w="full" justifyContent="space-between" alignItems="center">
+      <HStack mt={4} w='full' justifyContent='space-between' alignItems='center'>
         <Team
           code={data.firstTeamCountryCode}
-          position="right"
+          position='right'
           onChangeText={setFirstTeamPoints}
         />
 
@@ -64,16 +64,16 @@ export function Game({ data, setFirstTeamPoints, setSecondTeamPoints, onGuessCon
 
         <Team
           code={data.secondTeamCountryCode}
-          position="left"
+          position='left'
           onChangeText={setSecondTeamPoints}
         />
       </HStack>
 
       {
         !data.guess &&
-        <Button size="xs" w="full" bgColor="green.500" mt={4} onPress={onGuessConfirm}>
-          <HStack alignItems="center">
-            <Text color="white" fontSize="xs" fontFamily="heading" mr={3}>
+        <Button size='xs' w='full' bgColor='green.500' mt={4} onPress={onGuessConfirm}>
+          <HStack alignItems='center'>
+            <Text color='white' fontSize='xs' fontFamily='heading' mr={3}>
               CONFIRMAR PALPITE
             </Text>
 
