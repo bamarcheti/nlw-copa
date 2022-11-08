@@ -1,7 +1,6 @@
-import { Button, HStack, Text, useTheme, VStack } from 'native-base';
-import { X, Check } from 'phosphor-react-native';
 import { getName } from 'country-list';
-
+import { Button, HStack, Text, useTheme, VStack } from 'native-base';
+import { Check, X } from 'phosphor-react-native';
 import { Team } from './Team';
 
 interface GuessProps {
@@ -46,7 +45,7 @@ export function Game({ data, setFirstTeamPoints, setSecondTeamPoints, onGuessCon
       </Text>
 
       <Text color="gray.200" fontSize="xs">
-        22 de Novembro de 2022 às 16:00h
+        {data.guess.createdAt}
       </Text>
 
       <HStack mt={4} w="full" justifyContent="space-between" alignItems="center">
