@@ -1,4 +1,4 @@
-## 🚀 Como executar
+# **✨ Como executar**
 
 **Para que esse projeto funcione corretamente, é preciso estar com o servidor rodando.**
 

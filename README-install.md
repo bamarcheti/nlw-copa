@@ -1,7 +1,6 @@
-# Copa UI ⚽ 🇧🇷
-Trilha Ignite NLW Copa - [Rocketseat](https://lp.rocketseat.com.br/nlw).
+# **✨ Como executar**
 
-Este repositório contém o código desenvolvido na parte da UI.
+**Para que esse projeto funcione corretamente, é preciso estar com o servidor rodando.**
 
 >### **Requisitos**
 >- [Nodejs](https://nodejs.org/en/download/)
@@ -30,6 +29,12 @@ npm run dev ou npm run start
 npx expo start
 ```
 
+```sh
 // gerar uma migration no Prisma
 npx prisma migrate dev
+
+// abrir o Prisma via web
+npx prisma studio
+
 URL API: http://localhost:5173
+```
