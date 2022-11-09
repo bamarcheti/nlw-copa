@@ -1,13 +1,13 @@
 # __Bolão da Copa 2022__
 
-![capa](./.github/capa.png)
+<!--![capa](./.github/capa.png)
 ![entrar](./.github/entrar.jpeg)
 ![criar-bolao](./.github/criar-bolao.jpeg)
 ![listagem-bolao](./.github/listagem-bolao.jpeg)
 ![buscar-bolao](./.github/buscar-bolao.jpeg)
 ![bolao](./.github/bolao.jpeg)
 ![bolao-confirmado](./.github/bolao-confirmado.jpeg)
-![compartilhar](./.github/compartilhar.jpeg)
+![compartilhar](./.github/compartilhar.jpeg) -->
 
 >Trilha Ignite NLW Copa - [Rocketseat](https://lp.rocketseat.com.br/nlw).
 
