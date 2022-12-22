@@ -39,7 +39,7 @@ export default function Home({ poolCount, guessCount, userCount }: HomeProps) {
   }
 
   return (
-    <div className="max-w-[1124px] h-screen mx-auto grid grid-cols-2 gap-28 items-center">
+    <div className="max-w-6xl mt-8 mb-14 sm:mx-12 sm:mt-10 h-screen mx-auto grid grid-cols-2 gap-28 items-center">
       <main>
         <Image src={logoImg} alt="nlw copa" />
 
@@ -65,7 +65,7 @@ export default function Home({ poolCount, guessCount, userCount }: HomeProps) {
             onChange={event => setPoolTitle(event.target.value)}
           />
           <button 
-            className="bg-yellow-500  px-6 py-4 rounded text-gray-900 font-bold text-sm uppercase hover:bg-yellow-700" 
+            className="bg-yellow-500 px-6 py-4 rounded text-gray-900 font-bold text-sm uppercase hover:bg-yellow-700" 
             type="submit"
           >
             Criar meu bolão
@@ -77,8 +77,8 @@ export default function Home({ poolCount, guessCount, userCount }: HomeProps) {
           para convidar outras pessoas 🚀
         </p>
 
-        <div className="mt-10 pt-10 border-t border-gray-600 flex items-center justify-between text-gray-100">
-          <div className="flex items-center gap-6">
+        <div className="mt-10 mb-10 pt-10 border-t border-gray-600 flex items-center justify-between text-gray-100">
+          <div className="flex items-center gap-6 sm:ml-6">
             <Image src={iconCheck} alt="" />
             <div className="flex flex-col">
               <span className="font-bold text-2xl">+{poolCount}</span>
@@ -86,9 +86,9 @@ export default function Home({ poolCount, guessCount, userCount }: HomeProps) {
             </div>
           </div>
 
-          <div className="w-px h-14 bg-gray-600"/>
+          <div className="w-px h-16 bg-gray-600"/>
 
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-6 sm:ml-6">
             <Image src={iconCheck} alt="" />
             <div className="flex flex-col">
               <span className="font-bold text-2xl">+{guessCount}</span>
@@ -118,9 +118,11 @@ export const getServerSideProps = async () => {
     api.get('users/count'),
   ])
 
-  return { props: {
-    poolCount: poolCountResponse.data.count,
-    guessCount: guessCountResponse.data.count,
-    userCount: userCountResponse.data.count,
-  } }
+  return { 
+    props: {
+      poolCount: poolCountResponse.data.count,
+      guessCount: guessCountResponse.data.count,
+      userCount: userCountResponse.data.count,
+    } 
+  }
 }
