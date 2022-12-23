@@ -8,6 +8,7 @@
 ![bolao](./.github/bolao.jpeg)
 ![bolao-confirmado](./.github/bolao-confirmado.jpeg)
 ![compartilhar](./.github/compartilhar.jpeg) -->
+![web](./.github/web.png)
 
 >Trilha Ignite NLW Copa - [Rocketseat](https://lp.rocketseat.com.br/nlw).
 
