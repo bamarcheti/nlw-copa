@@ -61,12 +61,10 @@ PostCSS
 Autoprefixer 
 - Plugin para transcrição do PostCSS
 
-
 ## **✨ Como executar**
 - [Backend](./server/README.md)
 - [Frontend](./web/README.md)
 - [Mobile](./mobile/README.md)
-
 
 ## **💄 Layout**
 Para você poder visualizar o layout do projeto é necessário acessar o link abaixo:
